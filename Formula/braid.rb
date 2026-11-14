@@ -5,21 +5,21 @@
 class Braid < Formula
   desc "Sync Claude Code sessions from all your devices into one Braid server"
   homepage "https://usebraid.dev"
-  version "0.3.0"
+  version "0.4.0"
   license "AGPL-3.0-or-later"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/usebraid/braid/releases/download/v0.3.0/braid_0.3.0_darwin_amd64.tar.gz"
-      sha256 "0349ca193a73f01b8050f3cf6df5a8722cfb90ccd4a26b0dfa68083db2fe375c"
+      url "https://github.com/usebraid/braid/releases/download/v0.4.0/braid_0.4.0_darwin_amd64.tar.gz"
+      sha256 "720adc446a667d824ab6c950ae8254908f2051b5415de6a3f3eececf4e998ab0"
 
       define_method(:install) do
         bin.install "braid"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/usebraid/braid/releases/download/v0.3.0/braid_0.3.0_darwin_arm64.tar.gz"
-      sha256 "2179e25e9dd5fc677633fbc957fdeb452968465b8aee0fec14204312dc54ff5e"
+      url "https://github.com/usebraid/braid/releases/download/v0.4.0/braid_0.4.0_darwin_arm64.tar.gz"
+      sha256 "a03e3f0883c50c57f1db02a1ffe5f1098dc07fe5f68aca328f3b7d103f5ec972"
 
       define_method(:install) do
         bin.install "braid"
@@ -29,15 +29,15 @@ class Braid < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/usebraid/braid/releases/download/v0.3.0/braid_0.3.0_linux_amd64.tar.gz"
-      sha256 "511193e630a5169eb272ee721d2d2d5925eb1010e4c7b5696c78ef2d9fd037a5"
+      url "https://github.com/usebraid/braid/releases/download/v0.4.0/braid_0.4.0_linux_amd64.tar.gz"
+      sha256 "6a515d4dcd919824b2c796c54f6c5d9db47982eeab0d81fff0e662cb8ccf2cb1"
       define_method(:install) do
         bin.install "braid"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/usebraid/braid/releases/download/v0.3.0/braid_0.3.0_linux_arm64.tar.gz"
-      sha256 "c42ec06a9f2f53d201ac9e67d92e224b38109e9bbefec3c23cdc7013edee46e1"
+      url "https://github.com/usebraid/braid/releases/download/v0.4.0/braid_0.4.0_linux_arm64.tar.gz"
+      sha256 "a61d986147b54e3220bee10cb3f973d9e8dd0869425509d15d18cbc1c15f55e9"
       define_method(:install) do
         bin.install "braid"
       end
